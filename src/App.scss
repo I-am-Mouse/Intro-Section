@@ -1,0 +1,334 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+}
+.flex {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+}
+#openMenu, #closeMenu {
+    display: none;
+}
+#mobile-nav-bar {
+    display: none;
+}
+
+// HEADER
+header {
+    width: 94%;
+    margin: 30px auto;
+    div {
+        display: flex;
+        justify-content: space-between;
+            article {
+                display: flex;
+                #logo {
+                    margin-right: 30px;
+                }
+                aside {
+                    nav ul {
+                        list-style-type: none;
+                        li {
+                            a {
+                                text-decoration: none;
+                                padding: 0px 20px;
+                                font-size: 0.9rem;
+                                color: hsl(0, 0%, 41%);
+                                font-weight: 600;
+                                img {
+                                    padding-left: 5px;
+                                }
+                            }
+                            a:hover {
+                                color: hsl(0, 0%, 8%);
+                            }
+                        }
+                    }
+                }
+            }
+            article {
+                display: flex;
+                nav ul {
+                    list-style-type: none;
+                    li {
+                        a {
+                            text-decoration: none;
+                            padding: 0px 15px 0px 35px;
+                            font-size: 0.9rem;
+                            color: hsl(0, 0%, 41%);
+                            font-weight: 600;
+                        }
+                        a:hover {
+                            color: hsl(0, 0%, 8%);
+                        }
+                    }
+                }
+                button {
+                    margin-top: -15px;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    border: 1px solid hsl(0, 0%, 41%);
+                    background-color: hsl(0, 0%, 98%);
+                    color: hsl(0, 0%, 41%);
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                }
+                button:hover {
+                    color: hsl(0, 0%, 8%);
+                    background-color: hsl(0, 0%, 98%);
+                }
+                p {
+                    display: none;
+                }
+            }
+    }
+}
+
+#dropdown-feature {
+    article {
+      position: absolute;
+      margin-top: 10px;
+      display: block;
+      box-shadow: 3px 3px 7px hsl(0, 0%, 41%);
+      border-radius: 7px;
+      padding: 10px 5px;
+      a {
+        display: block;
+        font-weight: 500;
+        font-size: 12px;
+        border: none;
+        padding: 5px 7px;
+        align-items: center;
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 41%);
+        img {
+            padding-right: 10px;
+        }
+      }
+    }
+}
+#dropdown-company {
+    article {
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 15px;
+      display: block;
+      box-shadow: 3px 3px 7px hsl(0, 0%, 41%);
+      border-radius: 7px;
+      padding: 7px 5px;
+      a {
+        display: block;
+        font-weight: 500;
+        font-size: 12px;
+        border: none;
+        padding: 7px 7px;
+        align-items: center;
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 41%);
+      }
+    }
+}
+// MAIN
+main {
+    width: 75%;
+    margin: 40px auto;
+    position: relative;
+    div:first-child{
+        margin-top: 110px;
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 40px;
+            max-width: 480px;
+        }
+        p {
+            font-size: 0.9rem;
+            max-width: 350px;
+            line-height: 22px;
+            margin-bottom: 60px;
+            color: hsl(0, 0%, 41%);
+        }
+        button {
+            margin-bottom: 50px;
+            padding: 13px 20px;
+            border-radius: 10px;
+            color: hsl(0, 0%, 98%);
+            background-color: hsl(0, 0%, 8%);
+            border: none;
+        }
+        button:hover {
+            color: hsl(0, 0%, 8%);
+            background-color: hsl(0, 0%, 98%);
+            border: 1px solid hsl(0, 0%, 8%);
+        }
+    }
+    div:last-child{
+        width: 50%;
+        margin: 10px 0px;
+        text-align: center;
+        img {
+            width: 80%;
+        }
+        img:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    // MAIN
+    main {
+        div:last-child {
+            margin: 50px 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    // MAIN
+    main {
+        div:last-child {
+            margin: 80px 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) { 
+#openMenu, #closeMenu {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+}
+#openMenu {
+    display: inline-block;
+} 
+#closeMenu {
+    display: inline-block;
+} 
+#logo {
+    width: 100px;
+}
+#desktop-nav-1, #desktop-nav-2 {
+    display: none;
+}
+
+// HEADER
+    #mobile-nav-bar.open {
+        display: block;
+    }
+    #mobile-nav-bar.close {
+        display: none;
+    }
+    
+    div#mobile-nav-bar {
+        width: 35%;
+        height: 157vh;
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: hsl(0, 0%, 98%);
+        padding: 30px 20px 0px 25px;
+        z-index: 1;
+        nav ul {
+            list-style-type: none;
+            margin: 50px 0px 25px 0px;
+            li {
+                padding: 13px 0px;
+                a {
+                    text-decoration: none;
+                    padding: 0px 0px;
+                    font-size: 0.9rem;
+                    color: hsl(0, 0%, 41%);
+                    font-weight: 600;
+                    img {
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+        p {
+            text-align: center;
+            padding: 10px 0px;
+            font-weight: 600;
+        }
+        p#register {
+            border: 1px solid hsl(0, 0%, 41%);
+            border-radius: 10px;
+        }
+        p#register:hover {
+            border-color: hsl(0, 0%, 8%);
+        }
+        a {
+            text-decoration: none;
+            color: hsl(0, 0%, 41%);
+        }
+        a:hover {
+            color: hsl(0, 0%, 8%);
+        }
+    }
+    #mobile-feature-dropdown {
+        margin-top: 15px;
+        padding-left: 15px;
+        display: block;
+          a {
+            display: block;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 40px;
+            background-color: hsl(0, 0%, 98%);
+            color: hsl(0, 0%, 41%);
+            img {
+                padding-right: 10px;
+            }
+          }
+    }
+    #mobile-company-dropdown {
+        margin-top: 15px;
+        padding-left: 25px;
+        display: block;
+          a {
+            display: block;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 40px;
+            background-color: hsl(0, 0%, 98%);
+            color: hsl(0, 0%, 41%);
+          }
+    }
+//MAIN
+    main {
+        flex-direction: column-reverse;
+        width: 100%;
+        text-align: center;
+        div:first-child {
+            h1 {
+                font-size: 3.4rem;
+                max-width: 900px;
+            }
+            p {
+                max-width: 800px;
+            }
+            a {
+                padding: 0px 10px;
+            }
+        }
+        div:last-child{
+            width: 100%;
+            margin: 10px 0px;
+            text-align: center;
+            img {
+                display: none;
+            }
+            img:nth-child(2) {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
